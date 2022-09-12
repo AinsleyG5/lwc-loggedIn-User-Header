@@ -1,0 +1,61 @@
+<template>
+    <template if:true={usersName}>
+        <!-- <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-2 slds-theme_backgroundColor-lightgrey">
+                <div class="slds-m-around_medium">
+                    <div class="slds-align_absolute-center slds-text-heading_large">
+                        Welcome {usersName}!
+                    </div>
+                </div>
+                <div class="slds-box slds-theme_default">
+                    <div class="slds-align_absolute-center">
+                        <span>
+                            <template if:true={fullPhotoUrl}>
+                                <img src={fullPhotoUrl} alt="Logged in users headshot">
+                            </template>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-m-around_medium">
+                    <div class="slds-align_absolute-center slds-text-heading_medium">
+                        Ready to shape what's next, right now?
+                    </div>
+                </div>
+                <div class="slds-m-top_large">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-align_absolute-center slds-col slds-size_1-of-2">
+                            <button class="slds-button slds-button_brand">Find Talent</button>
+                        </div>
+                        <div class="slds-align_absolute-center slds-col slds-size_1-of-2">
+                            <button class="slds-button slds-button_outline-brand">View Requests</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <img src="https://i.imgur.com/JoFvWxF.jpg" alt="">
+            </div>
+          </div> -->
+        <div class="container">
+            <div class="parent">
+				<div>
+					<img class="image1" src={bannerImageURL}/>
+                    <template if:true={fullPhotoUrl}>
+                        <img class="image2" src={fullPhotoUrl} alt="Logged in users headshot">
+                    </template>
+				</div>
+			</div>
+			<div class="slds-grid slds-gutters slds-grid_vertical slds-m-top_large">
+				<div class="slds-col">
+					<div class="slds-text-heading_large">{usersName}</div>
+					<div class="slds-text-heading_small">{title}</div>
+					<div class="slds-text-color_weak">Enfield, london, United Kingdom</div>
+				</div>
+				<div class="slds-col slds-m-top_small">
+					<button class="slds-button slds-button_brand slds-m-right_small" onclick={navigateButton1}>{button1Name}</button>
+					<button class="slds-button slds-button_outline-brand slds-m-right_small" onclick={navigateButton2}>{button2Name}</button>
+				</div>
+			</div>
+		</div>
+    </template>
+</template>

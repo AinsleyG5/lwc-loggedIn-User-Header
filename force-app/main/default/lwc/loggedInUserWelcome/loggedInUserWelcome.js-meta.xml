@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>52.0</apiVersion>
+  <isExposed>true</isExposed>
+  <masterLabel>Simple Logged in User Welcome Image</masterLabel>
+  <description>Displays the users thumbnail image as well as two navigation buttons</description>
+  <targets>
+      <target>lightning__RecordPage</target>
+      <target>lightningCommunity__Page</target>
+      <target>lightningCommunity__Default</target>
+  </targets>
+  <targetConfigs>
+      <targetConfig targets="lightning__RecordPage">
+          <objects>
+              <object>sirenum__Shift__c</object>
+          </objects>
+      </targetConfig>
+      <targetConfig targets="lightningCommunity__Default">
+        <property name="bannerImage" default="" type="String" 
+              label="Banner Image" description="Pass in the URL for the image.  Must be 1600 x 220 pixels.  If left blank it will default to the bullhorn banner."/>
+          <property name="button1URL" default="" type="String" 
+              label="Primary Buttom URL" description="Pass in the API name of the community page you want to redirect to"/>
+          <property name="button1Name" label="Primary Button Name" type="String"
+              description="Name displayed in the UI" />
+          <property name="button2URL" label="Secondary Button URL" type="String"
+              description="Pass in the API name of the community page you want to redirect to" />
+          <property name="button2Name" label="Secondary Button Name" type="String"
+              description="Name displayed in the UI" />
+      </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>
